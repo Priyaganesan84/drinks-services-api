@@ -1,4 +1,5 @@
 import express from 'express';
+import { router } from './routes/routes';
 export const app = express();
 export const coffeeapp = express();
 app.use(express.json());
@@ -13,3 +14,10 @@ app.get('/coffee', (req, res) => res.json({
     drinkType: 'Coffee',
     name: 'Latte',
     }));
+
+    app.get('/coffee', (req, res) =>
+    res.json({
+    drinkType: 'Coffee',
+    name: 'Latte',
+    })
+    );
